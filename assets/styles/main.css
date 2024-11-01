@@ -163,3 +163,9 @@ span{
 .key.hide span{
     display: none;
 }
+
+@media screen and (max-width: 800px) {
+    .container{
+        rotate: 90deg;
+    }
+}
