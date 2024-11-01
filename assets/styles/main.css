@@ -1,6 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url(./reset.css);
 
 :root{
-    --cor-primaria: #fff;
-    --cor-secundaria: #000;
+    --fonte-principal: 'Poppins', sans-serif;
+    
+    --cor-da-fonte:#b2b2b2;
+    --cor-slider: #fff;
+    --cor-checkout: #8c8c8c;
+    
+    --fundo: #e3f2fd;
+    --fundo-piano: #000;
+    --fundo-check: #4b4b4b;
+    --fundo-key-white: linear-gradient(#fff 96%, #eee 4%);
+    --fundo-key-black: linear-gradient(#333, #000);
+    
+    --fundo-shadow-key-white: linear-gradient(to bottom, #fff 96%, #eee 100%);
+    --fundo-shadow-key-black: linear-gradient(to bottom, #000, #434343);
+
+    --shadow-key-white: inset -5px 5px 20px rgba(0, 0, 0, .2);
+    --shadow-key-black: inset -5px 5px 10px rgba(255, 255, 255, .1);
+}
+
+*{
+    font-family: var(--fonte-principal);
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--fundo);
+}
+
+.container{
+    width: 780px;
+    border-radius: 1.25rem;
+    padding: 2.1rem 2.5rem;
+    background-color: var(--fundo-piano);
+}
+
+.container 
+header{    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--cor-da-fonte);
+}
+
+header
+h2{
+    font-size: 2.6rem;
+}
+
+header
+.column{
+    display: flex;
+    align-items: center;
+}
+
+header
+.column
+span{
+    font-size: 1.19rem;
+    font-weight: 500;
+    margin-right: .938rem;
+}
+
+.volume-slider 
+input{
+    accent-color:var(--cor-slider);
+}
+
+.key-check 
+input{
+    width: 60px;
+    height: 30px;
+    appearance: none;
+    border-radius: 1.875rem;
+    cursor: pointer;
+    position: relative;
+    background-color: var(--fundo-check);
+}
+
+.key-check 
+input::before{
+    content: '';
+    height:  20px;
+    width: 20px;
+    
+    position: absolute;
+    top: 50%;
+    left: .3rem;
+    border-radius: inherit;
+    transform: translateY(-50%);
+    transition:  all 0.3s ease;
+    background-color: var(--cor-checkout);
+}
+
+.key-check 
+input:checked::before{
+    left: 2.1rem;
+    background-color: var(--cor-slider);
+}
+
+.piano-keys{
+    display: flex;
+    margin-top: 2.5rem;
+    justify-content: center;
+    gap: .1rem;
+}
+
+.piano-keys 
+.key{
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    text-transform: uppercase;
+    color: var(--cor-da-fonte);
+}
+
+.piano-keys 
+.white{
+    width: 70px;
+    height: 230px;
+    border-radius: .5rem;
+    background: var(--fundo-key-white);
+}
+
+.piano-keys 
+.white.active{
+    box-shadow: var(--shadow-key-white);
+    background: var(--fundo-shadow-key-white);
+}
+
+.piano-keys 
+.black{
+    width: 44px;
+    height: 140px;
+    z-index: 2;
+    margin: 0 -22px 0 -22px;
+    border-radius: 0 0 .3rem .3rem;
+    background: var(--fundo-key-black);
+}
+
+.piano-keys 
+.black.active{
+    box-shadow: var(--shadow-key-black);
+    background: var(--fundo-shadow-key-black);
+}
+
+.piano-keys 
+span{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.13rem;
 }
