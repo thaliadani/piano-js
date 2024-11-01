@@ -158,3 +158,8 @@ span{
     text-align: center;
     font-size: 1.13rem;
 }
+
+.piano-keys
+.key.hide span{
+    display: none;
+}
