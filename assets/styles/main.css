@@ -1,0 +1,6 @@
+@import url(./reset.css);
+
+:root{
+    --cor-primaria: #fff;
+    --cor-secundaria: #000;
+}
