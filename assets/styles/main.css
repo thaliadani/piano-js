@@ -163,33 +163,3 @@ span{
 .key.hide span{
     display: none;
 }
-
-@media screen and (max-width: 667px) {
-    .container{
-        width: 98%;
-        height: 370px;
-    }
-    .piano-keys .key{
-        height: 160px;
-        width: 150px;
-    }
-
-    .piano-keys .black{
-        height: 90px;
-    }
-}
-
-@media screen and (max-width: 870px) {
-    .container{
-        width: 98%;
-        height: 370px;
-    }
-    .piano-keys .key{
-        height: 220px;
-        width: 150px;
-    }
-
-    .piano-keys .black{
-        height: 140px;
-    }
-}
