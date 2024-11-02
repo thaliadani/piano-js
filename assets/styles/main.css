@@ -165,8 +165,7 @@ span{
 }
 
 @media screen and (max-width: 375px) {
-    .container{
-        rotate: 90deg;
+    .container{   
         height: 200px;
         width: 670px;
     }
@@ -174,7 +173,6 @@ span{
 
 @media screen and (max-width: 820px) {
     .container{
-        rotate: 90deg;
         height: 400px;
     }
 }
